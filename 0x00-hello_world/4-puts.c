@@ -1,6 +1,7 @@
 /*
  * File: 4-puts.c
- * Auth: B*Espoir ATIVON
+ * Auth: Espoir ATIVON
+ */
 
 include <stdio.h>
 
