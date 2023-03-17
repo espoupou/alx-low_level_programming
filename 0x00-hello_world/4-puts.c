@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+/* code for
+  *putting char
+*/
 
 int main(void)
 {
