@@ -4,7 +4,7 @@
 /**
  * print_to_98 - print to 98
  *
- * @n the start point
+ * @n: the start point
  *
  * Return:
  */
