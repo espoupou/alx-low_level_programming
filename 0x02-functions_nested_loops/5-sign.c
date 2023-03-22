@@ -4,7 +4,8 @@
  * print_sign - test a number and print it sign
  *
  * @n: the value to test
- * Return: 
+ *
+ * Return:
  */
 
 int print_sign(int n)
