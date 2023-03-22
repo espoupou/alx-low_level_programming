@@ -5,7 +5,7 @@
  *
  * @n: the value to test
  *
- * Return:
+ * Return: 1 if n is positive, -1 if negative or 0 if 0
  */
 
 int print_sign(int n)
