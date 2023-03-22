@@ -5,7 +5,7 @@
  *
  * @n: number
  *
- * Return: 
+ * Return:
  */
 
 void print_times_table(int n)
