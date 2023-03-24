@@ -1,8 +1,9 @@
 #include "main.h"
+#include "holberton.h"
 
 /**
  * main - prints an integer.
- * @n:the number
+ * @n: the number
  * Return: Always 0.
  */
 
