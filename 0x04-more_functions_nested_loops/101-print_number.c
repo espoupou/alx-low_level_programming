@@ -2,6 +2,7 @@
 
 /**
  * main - prints an integer.
+ * @n:the number
  * Return: Always 0.
  */
 
