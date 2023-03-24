@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * main - prints an integer.
+ * print_number - prints an integer.
  * @n: the number
  * Return: Always 0.
  */
