@@ -20,6 +20,6 @@ void rev_string(char *s)
 	{
 		temp = *(s + i);
 		*(s + i) = *(s + c - i - 1);
-		*(str + c - i - 1) = temp;
+		*(s + c - i - 1) = temp;
 	}
 }
