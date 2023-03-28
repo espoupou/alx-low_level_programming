@@ -13,9 +13,13 @@ void puts_half(char *str)
 
 	while (str[c] != '\0')
 		c++;
+
 	if (c % 2 == 1)
-		c += 1;
-	for (i = (int) (c / 2); i < c; i++)
+		i = (c / 2) + 1;
+	else
+		i = ((c - 1) / 2) + 1;
+
+	for (; i < c; i++)
 	{
 		_putchar(str[i]);
 	}
