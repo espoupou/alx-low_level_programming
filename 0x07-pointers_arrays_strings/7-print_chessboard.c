@@ -2,6 +2,7 @@
 
 /**
  * print_chessboard - print chessboard
+ * @a: the chess table
  * Return: nothing
  */
 
