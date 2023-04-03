@@ -10,13 +10,13 @@
 
 void print_diagsums(int *a, int size)
 {
-	int	i, j, *p;
-	
+	int i, j, *p;
+
 	for (i = 0; i < size; i++)
 	{
 		p = a;
 		for (j = 0 ; j < size; j++)
-			printf("%d ",p[j]);
+			printf("%d ", p[j]);
 		p++;
 		printf("\n");
 	}
