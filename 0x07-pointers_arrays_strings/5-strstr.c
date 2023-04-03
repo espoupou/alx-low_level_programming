@@ -3,7 +3,7 @@
 /**
  * _strstr - locates a substring
  * @haystack: the string
- * @needle: the substring 
+ * @needle: the substring
  *
  * Return:  first occurrence pointer or null
  */
