@@ -8,7 +8,8 @@
  * Return: 1 or 0
  */
 
-int palin(char *ch, int a, int b){
+int palin(char *ch, int a, int b)
+{
 	if (a > b)
 		return (1);
 
@@ -23,9 +24,9 @@ int palin(char *ch, int a, int b){
 
 int _strlen_recursion(char *s)
 {
-        if (*s == '\0')
-                return (0);
-        return (1 + _strlen_recursion(s + 1));
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
 
 /**
@@ -38,5 +39,5 @@ int is_palindrome(char *s)
 {
 	if (s[0] == '\0')
 		return (1);
-	return (palin(s, 0, _strlen(s) - 1))
+	return (palin(s, 0, _strlen_recursion(s) - 1));
 }
