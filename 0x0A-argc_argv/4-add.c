@@ -37,7 +37,7 @@ int _isnum(char *s)
 	return (1);
 }
 
-/*
+/**
  * main - add positive numbers
  * @argc: arguments count
  * @argv: arguments
