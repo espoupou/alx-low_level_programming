@@ -51,11 +51,11 @@ char *str_concat(char *s1, char *s2)
 
 char *argstostr(int ac, char **av)
 {
-	if (ac == 0 || av == NULL)
-		return (NULL);
-
 	char *s = NULL;
 	int i;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
