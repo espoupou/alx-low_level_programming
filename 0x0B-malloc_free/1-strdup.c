@@ -23,7 +23,7 @@ char *_strdup(char *str)
 
 	for (i = 1; str[i] != '\0'; i++)
 	{
-		s = realloc(s, i * sizeof(char));
+		s = realloc(s, (i + 1) * sizeof(char));
 		if (s == NULL)
 			return (NULL);
 		s[i] = str[i];
