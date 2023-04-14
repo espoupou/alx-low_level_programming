@@ -57,9 +57,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
-	{
-		s = str_concat(s, av[i]);
-	}
+
+
 	return (s);
 }
