@@ -85,10 +85,10 @@ int stringIsPosInt(char *s)
 
 /**
  * error - error return
- *
- * @status: error code to exit with
+ * Return: nothing
  */
-void error(int status)
+
+void error(void)
 {
 	_putchar('E');
 	_putchar('r');
@@ -96,7 +96,7 @@ void error(int status)
 	_putchar('o');
 	_putchar('r');
 	_putchar('\n');
-	exit(status);
+	/* exit(status); */
 }
 
 
@@ -107,6 +107,7 @@ void error(int status)
  * @argv: array of commmand line arguments
  * Return: 0 on success, 98 on failure
  */
+
 int main(int argc, char **argv)
 {
 	size_t i, av1_len, av2_len, prod_len;
@@ -114,7 +115,10 @@ int main(int argc, char **argv)
 
 	if (argc != 3 || !stringIsPosInt(argv[1]) ||
 	    !stringIsPosInt(argv[2]))
-		error(98);
+	{
+		error();
+		return (98);
+	}
 
 	for (i = 0, av1_len = 0; argv[1][i]; i++)
 		av1_len++;
@@ -125,7 +129,10 @@ int main(int argc, char **argv)
 	prod_len = av1_len + av2_len;
 	prod_digits = initDigitArray(prod_len);
 	if (prod_digits == NULL)
-		error(98);
+	{
+		error();
+		return (98);
+	}
 
 	stringIntMultiply(prod_digits, argv[1], argv[2], av1_len, av2_len);
 
