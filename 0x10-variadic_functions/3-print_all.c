@@ -3,6 +3,7 @@
 
 /**
  * sep - serator print
+ * @c: the flag
  * @i: int
  * Return: nothing
  */
