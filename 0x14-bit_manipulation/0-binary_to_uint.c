@@ -29,7 +29,7 @@ unsigned int binary_to_uint(const char *b)
 
 		if (*p & 1)
 		{
-			u += base_two;
+			u += i;
 		}
 	}
 
