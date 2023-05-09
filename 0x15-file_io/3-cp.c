@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+void rw_err(int, int, char **);
+
 /**
  * main - cp from file to file
  * @argc: argument count
@@ -16,6 +18,7 @@ int main(int argc, char **argv)
 {
 	int file_from, file_to;
 	ssize_t n, p;
+	char buf[1024];
 
 	if (argc != 3)
 	{
@@ -32,21 +35,19 @@ int main(int argc, char **argv)
 	{
 		n = read(file_from, buf, 1024);
 		if (n == -1)
-			error_file(-1, 0, argv);
+			rw_err(-1, 0, argv);
 		p = write(file_to, buf, n);
 		if (p == -1)
-			error_file(0, -1, argv);
+			rw_err(0, -1, argv);
 	}
 
-	err_close = close(file_from);
-	if (err_close == -1)
+	if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 
-	err_close = close(file_to);
-	if (err_close == -1)
+	if (close(file_to) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
