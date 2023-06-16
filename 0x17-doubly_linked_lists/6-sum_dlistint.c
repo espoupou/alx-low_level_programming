@@ -2,7 +2,7 @@
 
 /**
  * sum_dlistint - sum element
- * @headd: the head
+ * @head: the head
  * Return: the sum
  */
 
