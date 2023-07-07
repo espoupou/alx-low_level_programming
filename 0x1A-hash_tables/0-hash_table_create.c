@@ -9,27 +9,27 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i = 0;
-	hash_table_t *hash_table = malloc(sizeof(struct hash_table_s));
+	hash_table_t *table = malloc(sizeof(struct hash_table_s));
 
 	if (!size)
 		return (NULL);
 
-	if (hash_table == NULL)
+	if (table == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		return (NULL);
 	}
 
-	hash_table->array = malloc(sizeof(struct hash_node_s *) * size);
-	if (hash_table->array == NULL)
+	table->array = malloc(sizeof(struct hash_node_s *) * size);
+	if (table->array == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		return (NULL);
 	}
 
 	for (i = 0; i < size; i++)
-		hash_table->array[i] = NULL;
-	hash_table->size = size;
+		table->array[i] = NULL;
+	table->size = size;
 
-	return (hash_table);
+	return (table);
 }
