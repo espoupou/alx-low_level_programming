@@ -15,10 +15,17 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	hash_table = malloc(sizeof(struct hash_table_s));
 	if (hash_table == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
 		return (NULL);
+	}
+
 	hash_table->array = malloc(sizeof(struct hash_node_s *) * size);
 	if (hash_table->array == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
 		return (NULL);
+	}
 
 	for (i = 0; i < size; i++)
 		hash_table->array[i] = NULL;
