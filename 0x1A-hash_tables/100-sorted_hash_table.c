@@ -70,7 +70,7 @@ shash_node_t *add_shash(shash_node_t **h, const char *key, const char *value)
 
 /**
  * arrange - arange the hash table
- * @h: h=table head
+ * @ht: table head
  * @new: new node
  * Return: new head
  */
